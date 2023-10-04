@@ -36,7 +36,7 @@ resource "google_compute_firewall" "redis_vpc_firewall" {
 resource "google_compute_network_peering" "redis_peering" {
   name         = "redis-peering"
   network      = google_compute_network.redis_vpc.self_link
-  peer_network = "https://www.googleapis.com/compute/v1/projects/<PROJJECT1>/global/networks/redis-vpc"
+  peer_network = "https://www.googleapis.com/compute/v1/projects/<PROJECT1>/global/networks/redis-vpc"
 }
 
 resource "google_compute_router" "redis_router" {
