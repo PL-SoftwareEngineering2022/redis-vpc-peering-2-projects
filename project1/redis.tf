@@ -1,4 +1,3 @@
-
 resource "google_compute_network" "redis_vpc" {
   project                 = var.GCP_PROJECT
   name                    = "redis-vpc"
