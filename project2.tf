@@ -30,7 +30,10 @@ resource "google_compute_firewall" "redis_vpc_firewall" {
     protocol = "tcp"
     ports    = ["22", "6379"]
   }
-  source_ranges = ["35.235.240.0/20", "10.0.0.0/8"]
+  source_ranges = [
+    "35.235.240.0/20", # allows iap-tunnel
+    "10.0.0.0/8"
+  ]
 }
 
 resource "google_compute_network_peering" "redis_peering" {
