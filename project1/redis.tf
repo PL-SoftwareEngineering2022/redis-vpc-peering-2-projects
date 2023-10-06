@@ -71,4 +71,8 @@ resource "google_compute_instance" "redis_access_vm" {
     subnetwork = google_compute_subnetwork.redis_vpc_subnet.self_link
     stack_type = "IPV4_ONLY"
   }
+  service_account {
+    email  = "<PROJECT_NUMBER>-compute@developer.gserviceaccount.com"
+    scopes = ["cloud-platform"]
+  }
 }
