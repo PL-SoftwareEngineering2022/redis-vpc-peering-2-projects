@@ -15,7 +15,7 @@
  - [REDIS-1 IP]:6379:1
 ```
 - to start the nutcracker application:
-  - `sudo nutcracker --conf-file <path-to-nutcracker.yaml>
+  - `sudo nutcracker --conf-file <path-to-nutcracker.yaml>`
 - When you ssh into the access VM on project2, you can access the redis instance by using the redis-proxy to tunnel into it:
   - `redis-cli -h <redis-proxy-IP>`
 - On project1 you can decide to tunnel through the redis-proxy or tunnel to the redis instance directly
